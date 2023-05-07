@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{6fc3fcc3-3ab8-4be0-95fb-b9741ce9df38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{b5e61901-2033-42c2-b941-3e9e2b481b90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\implementing">
+      <UniqueIdentifier>{8b99bfde-fa92-4d62-9b25-e78929b2260e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\chinese rocks rg.ttf">
+      <Filter>assets</Filter>
+    </Font>
+    <Font Include="assets\Gumball.ttf">
+      <Filter>assets</Filter>
+    </Font>
+    <Font Include="assets\pixeboy.ttf">
+      <Filter>assets</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\backgroundMusic.wav">
+      <Filter>assets</Filter>
+    </Media>
+    <Media Include="assets\menuSFX.wav">
+      <Filter>assets</Filter>
+    </Media>
+    <Media Include="assets\swing_lynn.mp3">
+      <Filter>assets</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\tile.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\white.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\white3030.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\white4040.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\Ocho.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="assets\projectile.png">
+      <Filter>assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\map.csv">
+      <Filter>assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\boss.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bullet.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\constants.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameTexture.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hud.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\collision.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SDLcore.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sound.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\terrain.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\text.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\texture.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
