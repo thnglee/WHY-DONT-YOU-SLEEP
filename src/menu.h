@@ -38,7 +38,7 @@ void initMenuChoice()
 
 void drawMenu(SDL_Renderer* renderer, vector<SDL_Rect> choiceBoxes, vector<string> choiceContent, int choice)
 {
-    drawText(renderer, 5, 5, 30, to_string(choice));
+    //drawText(renderer, 5, 5, 30, to_string(choice));
     int choiceNumber = choiceBoxes.size();
     for(int i = 0; i < choiceNumber; i++)
     {
@@ -79,8 +79,7 @@ void drawMenuOver(SDL_Renderer* renderer,bool win,int menuChoice)
 {
     SDL_SetRenderDrawColor(renderer, 39, 39, 68,255);
     SDL_RenderClear(renderer);
-
-    if(win) drawText(renderer,490,150,67,"it's bedtime",{ 251,245,239, 255});
+    if(win) drawText(renderer,490,150,67,"you did it !",{ 251,245,239, 255});
     else drawText(renderer,510,150,67,"Game Over",{ 251,245,239, 255});
 
     drawMenu(renderer,choiceBox[2],choiceContent[2],menuChoice);

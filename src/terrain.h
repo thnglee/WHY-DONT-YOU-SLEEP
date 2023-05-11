@@ -27,15 +27,15 @@ void loadMap()
     }
 }
 
-SDL_Rect tType[2] = {{0,0,40,40},{40,0,40,40}};
+SDL_Rect tType[2] = {{0,0,tSize,tSize},{tSize,0,tSize,tSize}};
 void renderTerrain(SDL_Renderer* renderer)
 {
     for(int i = 0; i < nRow; i++)
     {
         for(int j = 0; j < nCol; j++)
-        {
+        {   
             tile.render(renderer,&tType[mapT[i][j]],j*tSize,i*tSize,tSize,tSize);
-        }
+        }   
     }
 }
 

@@ -78,11 +78,11 @@ void boss::move()
     x += velX;
     y += velY;
 
-    if (x < 40 || x + width > SCREEN_WIDTH - 40) velX =- velX;
-    if (y < 40 || y + height > SCREEN_HEIGHT - 40) velY =- velY;
+    if (x < tSize || x + width > SCREEN_WIDTH - tSize) velX =- velX;
+    if (y < tSize || y + height > SCREEN_HEIGHT - tSize) velY =- velY;
 
-    x = std::min(SCREEN_WIDTH - 40, std::max(40, x));
-    y = std::min(SCREEN_HEIGHT - 40, std::max(40, y));
+    x = std::min(SCREEN_WIDTH - tSize, std::max(tSize, x));
+    y = std::min(SCREEN_HEIGHT - tSize, std::max(tSize, y));
 }
 
 void boss::shoot()

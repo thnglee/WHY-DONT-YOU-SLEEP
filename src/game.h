@@ -80,6 +80,7 @@ void Game::initGameEntity()
     for(int i = 0; i < maxBulletNumber; i++) 
         bulletList[i].active = 0;
 }
+
 void Game::introMenu()
 {
     isStartMenu = true;
@@ -167,12 +168,12 @@ void Game::handleEvent(SDL_Event &e)
         quit = true;
         return ;
     }
-    if (e.type == SDL_KEYDOWN && e.key.repeat == 0)
+   /* if (e.type == SDL_KEYDOWN && e.key.repeat == 0)
     {
         if(e.key.keysym.sym == SDLK_KP_PLUS) volume += 10;
         else if(e.key.keysym.sym == SDLK_KP_MINUS) volume-=10;
         adjustVolume();
-    }
+    }*/
     if (isStartMenu || isGameOver) handleEventMenu(e);
     if (inGame)
     {
@@ -251,10 +252,10 @@ void Game::run()
                 fixMenuChoice(1,3);
             }
 
-            if(choice!=0) playSFX(menuSFX);
-            if(choice==1) startGame(); // play again
-            if(choice==2) introMenu(); //go back to menu  
-            if(choice==3) quit = true; //quit
+            if(choice != 0) playSFX(menuSFX);
+            if(choice == 1) startGame(); // play again
+            if(choice == 2) introMenu(); //go back to menu  
+            if(choice == 3) quit = true; //quit
             render();
         }
     }
@@ -290,5 +291,5 @@ void Game::render()
 
     // framerate manipulation: 
     int frameTime = std::max(int(SDL_GetTicks() - startTime),1);
-    if(frameTime < 1000/FPS) SDL_Delay(1000/FPS - frameTime);
+    if(frameTime < 1000 / FPS) SDL_Delay(1000 / FPS - frameTime);
 }

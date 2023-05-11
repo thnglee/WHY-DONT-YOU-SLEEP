@@ -18,6 +18,9 @@ struct player
     const int width = pSize;
     const int height = pSize;
 
+    SDL_Color normal_state = { 242, 211, 242, 255 };
+    SDL_Color invincible_state = {0,0,0, 255};
+
     player(int x, int y, int hp);
     void spawn(int x, int y, int hp);
     //~player();
@@ -65,9 +68,12 @@ void player::handleEvent(SDL_Event &e)
                 velX -= pVel;
                 break;
 
-            case SDLK_o: 
-                x = playerSpawnX;
-                y = playerSpawnY;
+            case SDLK_DOWN: case SDLK_s:
+                velY += pVel;
+                break;
+
+            case SDLK_UP: case SDLK_w:
+                velY -= pVel;
                 break;
         }
     } 
@@ -119,7 +125,9 @@ void player::move()
 
 void player::syncData()
 {
-    if (invincible && SDL_GetTicks() - hitTime >= 2000) invincible = 0;
+    if (invincible && SDL_GetTicks() - hitTime >= 2000) {
+        invincible = 0;
+    }
     if (invincible == 0 && (entityList[entityID].wasHit || struck()))
     {
         hp--;
@@ -135,7 +143,8 @@ void player::syncData()
 
 void player::render(SDL_Renderer* renderer)
 {   
-    SDL_SetRenderDrawColor(renderer, 242, 211, 242, 255);
+    if (!invincible) SDL_SetRenderDrawColor(renderer, normal_state.r, normal_state.g, normal_state.b, normal_state.a);
+    else SDL_SetRenderDrawColor(renderer, invincible_state.r, invincible_state.g, invincible_state.b, invincible_state.a);
     SDL_RenderFillRect(renderer,new SDL_Rect({ x, y, pSize, pSize}));
 }
 

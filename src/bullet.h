@@ -32,7 +32,7 @@ void bullet::init(int x, int y, double velX, double velY, bool fromPlayer = 1)
     willHit = 0;
     active = true;
 
-    if (fromPlayer) size = 3;
+    if (fromPlayer) size = 5;
     else size = 30;
 }
 
